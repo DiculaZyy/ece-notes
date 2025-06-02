@@ -1,0 +1,33 @@
+site_name: ECE Notes
+
+docs_dir : 'docs'
+
+site_url: https://diculazyy.github.io/ece-notes/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - content.code.copy
+    - content.code.select
+
+repo_url: https://github.com/DiculaZyy/ece-notes
+
+repo_name: DiculaZyy/ece-notes
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences:
+  - pymdownx.snippets:
+      base_path: ['src']
+  - pymdownx.details:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
