@@ -1,4 +1,4 @@
-# LWIP裸机库和RTL8211F配置问题
+# lwIP裸机库和RTL8211F配置问题
 
 ## 错误原因
 
@@ -27,7 +27,7 @@ PHY 已经自协商成功，
 但是多是SDK或Vitis Classic版的，
 缺少Vitis Unified IDE所需的yaml以及CMake配置，
 也没有对于SDT的API的支持，
-相比之下直接从最新版lwip库的基础上修改更为方便。
+相比之下直接从最新版lwIP库的基础上修改更为方便。
 
 ## 修改方法
 
@@ -35,7 +35,7 @@ PHY 已经自协商成功，
 
 首先从Vitis的安装路径中
 `data/embeddedsw/ThirdParty/sw_services/`
-目录下找到lwip库，
+目录下找到lwIP库，
 可以看到有多个版本，
 找到最新的一版，
 进入版本目录后，检查：
@@ -87,9 +87,9 @@ Vitis → Embedded SW Repositories...
 ```
 
 添加软件仓库（修改后的库的上层目录）并Rescan，
-此时重新生成BSP可以看到lwip库有两个路径，
+此时重新生成BSP可以看到lwIP库有两个路径，
 选择本地仓库的路径即可。
-此时lwip已经被替换为修改后的版本，
+此时lwIP已经被替换为修改后的版本，
 构建完成即可正常驱动 RTL8211F。
 
 ## 参考资料
